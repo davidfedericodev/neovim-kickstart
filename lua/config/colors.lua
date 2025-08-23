@@ -1,20 +1,79 @@
--- This changes the color of the functions calls
-vim.cmd [[hi @function.builtin guifg=#eb6f92]]
-
--- IMPORT
-vim.api.nvim_set_hl(0, '@keyword.import', { fg = '#eb6f92' })
-
--- RETURN
-vim.api.nvim_set_hl(0, '@keyword.return', { fg = '#eb6f92' })
-
--- IF / ELSE / SWITCH
-vim.api.nvim_set_hl(0, '@keyword.conditional', { fg = '#f6c177' })
-
--- CONST / LET / VAR
-vim.api.nvim_set_hl(0, '@keyword', { fg = '#f6c177' })
-
--- DEFINIZIONE DELLE FUNZIONI
-vim.api.nvim_set_hl(0, '@function.definition', { fg = '#f6c177' })
-
--- (Facoltativo) Nomi di funzione quando vengono chiamate
-vim.api.nvim_set_hl(0, '@function.call', { fg = '#c4a7e7' })
+-- -- init.lua (or a separate module you require)
+-- vim.opt.termguicolors = true
+--
+-- local function set_my_highlights()
+--   local set = vim.api.nvim_set_hl
+--   set(0, '@function.builtin', { fg = '#eb6f92' })
+--   set(0, '@keyword.import', { fg = '#eb6f92' })
+--   set(0, '@keyword.return', { fg = '#eb6f92' })
+--   set(0, '@keyword.conditional', { fg = '#f6c177' })
+--   set(0, '@keyword', { fg = '#f6c177' })
+--   -- use @function or @function.method (not @function.definition)
+--   set(0, '@function', { fg = '#f6c177' })
+--   set(0, '@function.call', { fg = '#c4a7e7' })
+--
+--   -- general UI transparency
+--   set(0, 'Normal', { bg = 'NONE' })
+--   set(0, 'NormalNC', { bg = 'NONE' })
+--   -- set(0, 'SignColumn', { bg = 'NONE' })
+--   -- set(0, 'LineNr', { bg = 'NONE' })
+--   -- set(0, 'CursorLine', { bg = '#1F1D2E' })
+--   set(0, 'CursorLine', { bg = 'NONE' })
+--   set(0, 'CursorLineNr', { bg = 'NONE' })
+--   set(0, 'WinSeparator', { bg = 'NONE' }) -- window split line
+--   -- set(0, 'Visual', { bg = 'NONE', underline = true }) -- optional, or choose a subtle fg
+--
+--   -- statuslines (affects lualine)
+--   -- set(0, 'StatusLine', { bg = 'NONE' })
+--   -- set(0, 'StatusLineNC', { bg = 'NONE' })
+--
+--   -- floats / popups / cmp menu
+--   set(0, 'NormalFloat', { bg = 'NONE' })
+--   -- set(0, 'FloatBorder', { bg = 'NONE' })
+--   set(0, 'FloatTitle', { bg = 'NONE' })
+--   set(0, 'Pmenu', { bg = 'NONE' })
+--   set(0, 'PmenuSel', { bg = 'NONE' })
+--   set(0, 'PmenuSbar', { bg = 'NONE' })
+--   set(0, 'PmenuThumb', { bg = 'NONE' })
+--
+--   -- -- tabline (if you ever use it)
+--   -- set(0, 'TabLineFill', { bg = 'NONE' })
+--   -- set(0, 'TabLine', { bg = 'NONE' })
+--   -- set(0, 'TabLineSel', { bg = 'NONE' })
+--
+--   -- noice.nvim
+--   set(0, 'NoicePopup', { bg = 'NONE' })
+--   set(0, 'NoicePopupBorder', { bg = 'NONE' })
+--   set(0, 'NoiceCmdlinePopup', { bg = 'NONE' })
+--   set(0, 'NoiceCmdlinePopupBorder', { bg = 'NONE' })
+--   set(0, 'NoiceConfirm', { bg = 'NONE' })
+--   set(0, 'NoiceCursor', { bg = 'NONE' }) -- sometimes used
+--
+--   -- nvim-notify
+--   set(0, 'NotifyBackground', { bg = 'NONE' })
+--   set(0, 'NotifyINFOBody', { bg = 'NONE' })
+--   set(0, 'NotifyWARNBody', { bg = 'NONE' })
+--   set(0, 'NotifyERRORBody', { bg = 'NONE' })
+--   set(0, 'NotifyDEBUGBody', { bg = 'NONE' })
+--   set(0, 'NotifyTRACEBody', { bg = 'NONE' })
+--   set(0, 'NotifyINFOBorder', { bg = 'NONE' })
+--   set(0, 'NotifyWARNBorder', { bg = 'NONE' })
+--   set(0, 'NotifyERRORBorder', { bg = 'NONE' })
+--   set(0, 'NotifyDEBUGBorder', { bg = 'NONE' })
+--   set(0, 'NotifyTRACEBorder', { bg = 'NONE' })
+--
+--   -- fidget.nvim
+--   set(0, 'FidgetTitle', { bg = 'NONE' })
+--   set(0, 'FidgetTask', { bg = 'NONE' })
+--   set(0, 'FidgetProgress', { bg = 'NONE' })
+--   set(0, 'FidgetProgressIcon', { bg = 'NONE' })
+--   set(0, 'FidgetProgressTitle', { bg = 'NONE' })
+-- end
+--
+-- -- run once now…
+-- set_my_highlights()
+--
+-- -- …and every time a colorscheme is applied
+-- vim.api.nvim_create_autocmd('ColorScheme', {
+--   callback = set_my_highlights,
+-- })
