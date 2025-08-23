@@ -51,12 +51,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Move between buffers
-vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
+-- vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+-- vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
 
 -- Reorder buffers
-vim.keymap.set('n', '[B', '<cmd>BufferLineMovePrev<CR>', { desc = 'Move buffer left' })
-vim.keymap.set('n', ']B', '<cmd>BufferLineMoveNext<CR>', { desc = 'Move buffer right' })
+-- vim.keymap.set('n', '[B', '<cmd>BufferLineMovePrev<CR>', { desc = 'Move buffer left' })
+-- vim.keymap.set('n', ']B', '<cmd>BufferLineMoveNext<CR>', { desc = 'Move buffer right' })
 
 -- Pick buffer with a letter (like Telescope)
 vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<CR>', { desc = 'Pick buffer' })

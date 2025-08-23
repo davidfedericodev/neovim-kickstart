@@ -6,13 +6,13 @@ return {
     local dashboard = require 'alpha.themes.dashboard'
 
     -- Catppuccin Mocha Colors
-    local colors = {
-      blue = '#89B4FA',
-      lavender = '#B4BEFE',
-      pink = '#F5C2E7',
-      flamingo = '#F2CDCD',
-      text = '#CDD6F4',
-    }
+    -- local colors = {
+    --   blue = '#89B4FA',
+    --   lavender = '#B4BEFE',
+    --   pink = '#F5C2E7',
+    --   flamingo = '#F2CDCD',
+    --   text = '#CDD6F4',
+    -- }
 
     -- Set Header (con gradienti Catppuccin Mocha)
     dashboard.section.header.val = {
