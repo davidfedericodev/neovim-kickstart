@@ -8,8 +8,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Exit Neovim
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<CR>')
 
--- Open Ex
-vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
+-- -- Open Ex
+-- vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -71,10 +71,13 @@ vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' }
 -- vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) -- split window horizontally
 vim.keymap.set('n', '<leader>sx', '<cmd>close<CR>', { desc = 'Close current split' }) -- close current split window
 
-vim.keymap.set('n', '<leader>e', function()
-  if vim.bo.filetype == 'oil' then
-    vim.cmd 'close'
-  else
-    vim.cmd 'Oil --float'
-  end
-end, { desc = 'Toggle Oil float' })
+-- vim.keymap.set('n', '<leader>e', function()
+--   if vim.bo.filetype == 'oil' then
+--     vim.cmd 'close'
+--   else
+--     vim.cmd 'Oil --float'
+--   end
+-- end, { desc = 'Toggle Oil float' })
+
+-- Duplicate line
+vim.keymap.set('v', '<leader>d', 'y`>p', { desc = 'Duplica la selezione sotto' })
