@@ -19,6 +19,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   { import = 'kickstart.plugins' },
   { import = 'custom.plugins' },
+  { import = 'config.theme' },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
@@ -39,4 +40,5 @@ require('lazy').setup({
   },
 })
 
+vim.cmd 'colorscheme everforest'
 -- vim: ts=2 sts=2 sw=2 et

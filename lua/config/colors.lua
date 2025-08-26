@@ -1,17 +1,17 @@
 -- -- init.lua (or a separate module you require)
 -- vim.opt.termguicolors = true
---
+-- --
 -- local function set_my_highlights()
---   local set = vim.api.nvim_set_hl
---   set(0, '@function.builtin', { fg = '#eb6f92' })
---   set(0, '@keyword.import', { fg = '#eb6f92' })
---   set(0, '@keyword.return', { fg = '#eb6f92' })
---   set(0, '@keyword.conditional', { fg = '#f6c177' })
---   set(0, '@keyword', { fg = '#f6c177' })
---   -- use @function or @function.method (not @function.definition)
---   set(0, '@function', { fg = '#f6c177' })
---   set(0, '@function.call', { fg = '#c4a7e7' })
---
+--     local set = vim.api.nvim_set_hl
+--     set(0, '@function.builtin', { fg = '#eb6f92' })
+--     set(0, '@keyword.import', { fg = '#eb6f92' })
+--     set(0, '@keyword.return', { fg = '#eb6f92' })
+--     set(0, '@keyword.conditional', { fg = '#f6c177' })
+--     set(0, '@keyword', { fg = '#f6c177' })
+--     -- use @function or @function.method (not @function.definition)
+--     set(0, '@function', { fg = '#f6c177' })
+--     set(0, '@function.call', { fg = '#c4a7e7' })
+--   --
 --   -- general UI transparency
 --   set(0, 'Normal', { bg = 'NONE' })
 --   set(0, 'NormalNC', { bg = 'NONE' })
@@ -24,8 +24,8 @@
 --   -- set(0, 'Visual', { bg = 'NONE', underline = true }) -- optional, or choose a subtle fg
 --
 --   -- statuslines (affects lualine)
---   -- set(0, 'StatusLine', { bg = 'NONE' })
---   -- set(0, 'StatusLineNC', { bg = 'NONE' })
+--   set(0, 'StatusLine', { bg = 'NONE' })
+--   set(0, 'StatusLineNC', { bg = 'NONE' })
 --
 --   -- floats / popups / cmp menu
 --   set(0, 'NormalFloat', { bg = 'NONE' })
