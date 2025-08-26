@@ -5,6 +5,7 @@ return { -- Useful plugin to show you pending keybinds.
     -- delay between pressing a key and opening which-key (milliseconds)
     -- this setting is independent of vim.o.timeoutlen
     delay = 0,
+    preset = 'helix',
     icons = {
       -- set icon mappings to true if you have a Nerd Font
       mappings = vim.g.have_nerd_font,
@@ -46,7 +47,18 @@ return { -- Useful plugin to show you pending keybinds.
     spec = {
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      -- { '<leader>h', group = '[H]arpoon', mode = { 'n', 'v' } },
+      { '<leader>h', group = '[H]arpoon' },
+      { '<leader>n', group = '[H]arpoon cycle next' },
+      { '<leader>p', group = '[H]arpoon cycle previous' },
+      { '<leader>g', group = '[G]it' },
+      { '<leader>l', group = '[L]ive Server' },
+      { '<leader>m', group = 'Format File' },
+      { '<leader>o', group = '[O]penCode' },
+      { '<leader>c', group = 'Session manager' },
+      { '<leader>r', group = '[R]ename' },
+      { '<leader>u', group = 'Colorscheme + ZenMode' },
+      { '<leader>x', group = 'Abbreviation' },
     },
   },
 }

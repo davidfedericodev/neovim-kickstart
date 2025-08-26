@@ -207,6 +207,17 @@ return {
       -- ts_ls = {},
       --
 
+      vtsls = {
+        root_dir = function(fname)
+          local util = require 'lspconfig.util'
+          return util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git')(fname) or util.path.dirname(fname)
+        end,
+        settings = {
+          typescript = { inlayHints = { parameterNames = { enabled = 'all' } } },
+          javascript = { inlayHints = { parameterNames = { enabled = 'all' } } },
+        },
+      },
+
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },

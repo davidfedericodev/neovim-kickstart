@@ -16,7 +16,7 @@ return {
         files = {
           hidden = true,
           -- Way too many files (dist, node_modules, etc)
-          -- ignored = true,
+          ignored = true,
         },
       },
       layout = {
