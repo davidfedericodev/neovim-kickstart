@@ -1,82 +1,52 @@
+-- FIX: `OA` on up arrow press,
+-- and ignoring first keypress after normal -> terminal mode
 return {
   'folke/snacks.nvim',
-  priority = 1000,
-  lazy = false,
-  ---@type snacks.Config
   opts = {
-    input = {
+    terminal = {
       enabled = true,
-    },
-    bigfile = { enabled = true },
-    -- WARNING: Breaks and issues tons of warnings in VSCode Neovim
-    words = { enabled = true },
-    -- statuscolumn = {
-    --   enabled = true,
-    --   folds = {
-    --     git_hl = true, -- use Git Signs hl for fold icons
-    --   },
-    -- },
-    notifier = { -- Used by noice
-      top_down = false,
-      style = 'compact',
+      auto_insert = false,
+      win = {
+        wo = {
+          winbar = '',
+          -- winhighlight = 'Normal:Normal',
+        },
+        border = vim.o.winborder,
+      },
     },
   },
   keys = {
     {
-      '<leader>uz',
+      '<c-\\>',
       function()
-        Snacks.zen()
+        Snacks.terminal.toggle()
       end,
-      desc = 'Toggle Zen Mode',
-    },
-    {
-      '<leader>bdc',
-      function()
-        Snacks.bufdelete.delete()
-      end,
-      desc = 'Delete current buffer',
-    },
-    {
-      '<leader>bda',
-      function()
-        Snacks.bufdelete.all()
-      end,
-      desc = 'Delete all buffers',
-    },
-    {
-      '<leader>bdo',
-      function()
-        Snacks.bufdelete.other()
-      end,
-      desc = 'Delete other buffers',
-    },
-    {
-      '<leader>.',
-      function()
-        Snacks.scratch()
-      end,
-      desc = 'Toggle Scratch Buffer',
+      desc = 'Toggle terminal',
+      mode = { 'n', 't' },
     },
     -- {
-    --   '<leader>S',
+    --   '<leader>tf',
     --   function()
-    --     Snacks.scratch.select()
+    --     Snacks.terminal.toggle(nil, {
+    --       env = {
+    --         -- So Snacks IDs it differently
+    --         floating = 'true',
+    --       },
+    --       win = {
+    --         position = 'float',
+    --       },
+    --     })
     --   end,
-    --   desc = 'Select Scratch Buffer',
+    --   desc = 'Toggle floating terminal',
+    --   mode = 'n',
     -- },
     {
-      ']]',
+      '<s-c-\\>',
       function()
-        Snacks.words.jump(vim.v.count1)
+        Snacks.terminal.open()
       end,
-      desc = 'Next Reference',
-    },
-    {
-      '[[',
-      function()
-        Snacks.words.jump(-vim.v.count1)
-      end,
-      desc = 'Prev Reference',
+      desc = 'Open new terminal',
+      mode = 'n',
     },
   },
 }

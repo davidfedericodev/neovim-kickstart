@@ -7,6 +7,14 @@ return {
   ---@type opencode.Opts
   opts = {
     -- Your configuration, if any — see lua/opencode/config.lua
+    terminal = {
+      -- Override my snacks.nvim terminal config. No reason to prefer normal mode for opencode - can't scroll its TUI like a normal terminal buffer.
+      auto_insert = true,
+      auto_close = true,
+      win = {
+        position = 'right',
+      },
+    },
   },
   keys = {
     -- Recommended keymaps

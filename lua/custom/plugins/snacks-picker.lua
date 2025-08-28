@@ -54,7 +54,7 @@ return {
   },
   keys = {
     {
-      '<leader>e',
+      '\\',
       function()
         Snacks.explorer.open()
       end,
