@@ -12,7 +12,7 @@ return {
       auto_insert = true,
       auto_close = true,
       win = {
-        position = 'right',
+        position = 'left',
       },
     },
   },
